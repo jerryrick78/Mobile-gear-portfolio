@@ -1,0 +1,115 @@
+{
+  "identity": {
+    "persona": "E1",
+    "tone": "Professional, Clean, Tech-Minimalist",
+    "archetype": "Swiss & High-Contrast (Archetype 4) with a 'Lab Clean' twist"
+  },
+  "typography": {
+    "headings": {
+      "family": "Manrope, sans-serif",
+      "weights": ["600", "800"],
+      "usage": "Use for all section titles, hero text, and product names. Tracking tight (-0.02em).",
+      "import_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Inter:wght@400;500;600&display=swap"
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use for descriptions, prices, and UI elements."
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#ffffff",
+      "foreground": "#0f172a",
+      "primary": "#0f172a",
+      "primary_foreground": "#f8fafc",
+      "secondary": "#f1f5f9",
+      "secondary_foreground": "#0f172a",
+      "accent": "#4f46e5",
+      "accent_foreground": "#ffffff",
+      "muted": "#f8fafc",
+      "muted_foreground": "#64748b",
+      "border": "#e2e8f0"
+    },
+    "strategy": "Monochrome base (White/Black/Slate) with Electric Indigo (#4f46e5) for primary actions only. High contrast is mandatory."
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Mode A) for categories and features.",
+    "spacing": "Generous. Use p-8 to p-12 for section padding. Gap-6 to gap-8 for grids.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "radius": "rounded-xl (12px) for cards, rounded-full for buttons."
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped (rounded-full). Primary: Solid Black. Secondary: White with Border.",
+      "interaction": "Scale up slightly (1.05) on hover. Active state: Scale down (0.95)."
+    },
+    "cards": {
+      "style": "Flat, 1px border (border-slate-200), no shadow by default. Hover: Lift (-4px) and soft shadow-xl.",
+      "content_padding": "p-6"
+    },
+    "inputs": {
+      "style": "h-12 rounded-lg border-slate-200 bg-slate-50 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Use backdrop-blur-md bg-white/80 for sticky headers and floating carts.",
+    "gradients": "Subtle 'Aurora' gradients (Indigo to Cyan) only on 'New Arrival' badges or hero text highlights. Never on backgrounds.",
+    "shadows": "Soft, diffuse shadows: shadow-[0_8px_30px_rgb(0,0,0,0.04)]."
+  },
+  "motion": {
+    "library": "framer-motion",
+    "transitions": "Spring physics (stiffness: 100, damping: 20) for interactions. Ease-out (0.4s) for page loads.",
+    "micro_interactions": "Buttons must scale. Images must zoom slightly on hover."
+  },
+  "images": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1764855310912-15dee3625bf2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzbWFydHBob25lJTIwY2FzZSUyMGxpZmVzdHlsZXxlbnwwfHx8fDE3NjgyODAyNzJ8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Premium smartphone lifestyle",
+      "category": "hero"
+    },
+    "categories": [
+      {
+        "name": "Cases & Protection",
+        "url": "https://images.unsplash.com/photo-1760443728294-81b19787ec4c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBzbWFydHBob25lJTIwY2FzZSUyMGxpZmVzdHlsZXxlbnwwfHx8fDE3NjgyODAyNzJ8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "name": "Audio",
+        "url": "https://images.unsplash.com/photo-1637868796503-9191d8ae78be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwd2lyZWxlc3MlMjBoZWFkcGhvbmVzJTIwcHJvZHVjdHxlbnwwfHx8fDE3NjgyODAyNzV8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "name": "Power & Charging",
+        "url": "https://images.unsplash.com/photo-1760462788394-80bdaa1fa2bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxzbGVlayUyMHBvd2VyJTIwYmFuayUyMG1vYmlsZSUyMGNoYXJnZXJ8ZW58MHx8fHwxNzY4MjgwMjgxfDA&ixlib=rb-4.1.0&q=85"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'lucide-react', 'framer-motion', 'clsx', 'tailwind-merge' immediately.",
+    "2. CLEANUP: Remove all default CSS from App.css. Use Tailwind for everything.",
+    "3. COMPONENTS: Use the existing Shadcn components in /components/ui but override their styles using the 'cn' utility to match the E1 design system (rounded-xl, border-slate-200).",
+    "4. LAYOUT: Build a 'Layout' component that wraps pages with a sticky glassmorphic header and a clean footer.",
+    "5. PAGES: Implement Home (Hero + Bento Categories + Featured), Product List (Grid + Sidebar Filters), Product Detail (Gallery + Specs), Cart (Slide-over or Page), Login/Signup (Simple centered card).",
+    "6. ADMIN: Create a separate layout for '/admin' with a sidebar navigation. Use a dense data grid for the product list.",
+    "7. MOCK DATA: Create a 'products.js' file with mock data using the images provided. Do not leave the UI empty."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
